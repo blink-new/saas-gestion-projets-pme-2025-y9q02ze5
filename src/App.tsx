@@ -3,6 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { blink } from './blink/client'
 import { AppSidebar } from './components/layout/AppSidebar'
 import { Dashboard } from './components/dashboard/Dashboard'
+import { ProjectsPage } from './components/projects/ProjectsPage'
+import { TasksPage } from './components/tasks/TasksPage'
+import { TeamsPage } from './components/teams/TeamsPage'
 import { Toaster } from './components/ui/toaster'
 import { Loader2 } from 'lucide-react'
 
@@ -81,26 +84,11 @@ function App() {
       case 'dashboard':
         return <Dashboard />
       case 'projects':
-        return (
-          <div className="space-y-6">
-            <h1 className="text-3xl font-bold">Projets</h1>
-            <p className="text-muted-foreground">Gestion de vos projets - En développement</p>
-          </div>
-        )
+        return <ProjectsPage />
       case 'tasks':
-        return (
-          <div className="space-y-6">
-            <h1 className="text-3xl font-bold">Tâches</h1>
-            <p className="text-muted-foreground">Gestion de vos tâches - En développement</p>
-          </div>
-        )
+        return <TasksPage />
       case 'teams':
-        return (
-          <div className="space-y-6">
-            <h1 className="text-3xl font-bold">Équipes</h1>
-            <p className="text-muted-foreground">Gestion de vos équipes - En développement</p>
-          </div>
-        )
+        return <TeamsPage />
       case 'analytics':
         return (
           <div className="space-y-6">
